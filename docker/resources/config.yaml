@@ -1,0 +1,33 @@
+# DEBUG or PRODUCTION
+log:
+  level: DEBUG
+
+# The hex value of the server decrypt key for hosted cards.
+#
+# If left empty, a new secure key gets generated automatically.
+aes-decrypt-key: ""
+
+# How this service is reached from the internet.
+domain: boltcard.example.com
+
+# The lightning server used for making payments.
+ln:
+  host: ln.example.com
+  port: 10009
+
+# The allowed withdraw-range in sats.
+withdraw:
+  min: 1
+  max: 100
+
+# The lightning network fee settings. The maximum fee is the base + the percentage.
+fee:
+  # Base amount in sats.
+  base: 5
+  # Percent of the payment amount.
+  percent: 0.5
+
+# Enable or disable functions.
+function:
+  lnurlw: true
+  lnurlp: false
